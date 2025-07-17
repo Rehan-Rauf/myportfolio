@@ -2,78 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rehan Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehan Rauf - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/developer.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="container">
+    <nav class="sidebar">
+      <h2>Rehan Rauf</h2>
+      <ul>
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#about">🙋‍♂️ About Me</a></li>
+        <li><a href="#skills">🛠 My Skills</a></li>
+        <li><a href="#projects">💼 Projects</a></li>
+        <li><a href="#contact">📩 Contact</a></li>
+        <li><button id="darkToggle">🌙</button></li>
+      </ul>
+    </nav>
 
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div id="logo">
-      <img src="https://via.placeholder.com/60x30.png?text=Logo" alt="Logo">
-    </div>
-    <ul>
-      <li><a href="#" onclick="showSection('home')">Home</a></li>
-      <li><a href="#" onclick="showSection('about')">About</a></li>
-      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-    </ul>
-  </nav>
+    <main class="content">
+      <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I’m Rehan Rauf, a passionate frontend developer learning full-stack technologies.</p>
+        <button class="btn">Download CV</button>
+      </section>
 
-  <!-- Content Box -->
-  <section id="main-content">
-    <!-- Dynamic content will appear here -->
-  </section>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I'm currently a BS Software Engineering student at Federal Urdu University. I love creating beautiful, responsive websites and constantly strive to improve my coding skills. I have experience in C++, Java, HTML, CSS, and I'm learning JavaScript and backend tools. My goal is to become a full-stack developer. I'm a team player, quick learner, and enjoy working on real-world projects.</p>
+      </section>
 
-  <!-- JavaScript -->
-  <script>
-    const contentBox = document.getElementById("main-content");
+      <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-list">
+          <div class="skill"><img src="https://img.icons8.com/color/48/html-5.png" alt="HTML" />HTML</div>
+          <div class="skill"><img src="https://img.icons8.com/color/48/css3.png" alt="CSS" />CSS</div>
+          <div class="skill"><img src="https://img.icons8.com/color/48/javascript.png" alt="JS" />JavaScript</div>
+          <div class="skill"><img src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="C++" />C++</div>
+          <div class="skill"><img src="https://img.icons8.com/color/48/java-coffee-cup-logo.png" alt="Java" />Java</div>
+          <div class="skill"><img src="https://img.icons8.com/ios/50/github--v1.png" alt="GitHub" />GitHub</div>
+          <!-- Add more as needed -->
+        </div>
+      </section>
 
-    function showSection(section) {
-      let content = "";
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <img src="https://img.icons8.com/fluency/96/restaurant.png" alt="Project Logo" />
+            <h3>Restaurant Website</h3>
+            <p>A responsive restaurant site using HTML/CSS with a menu and order section.</p>
+          </div>
+          <div class="project">
+            <img src="https://img.icons8.com/color/96/calculator.png" alt="Calculator" />
+            <h3>JavaScript Calculator</h3>
+            <p>Simple calculator with basic operations using vanilla JS.</p>
+          </div>
+          <!-- Duplicate & change info for more projects -->
+        </div>
+      </section>
 
-      switch(section) {
-        case 'home':
-          content = `
-            <h1>Welcome to Rehan's Portfolio</h1>
-            <p>I am a Front-End Developer & Student of BS Software Engineering.</p>
-          `;
-          break;
-        case 'about':
-          content = `
-            <h1>About Me</h1>
-            <p>Hi, I'm Rehan Rauf. Currently studying in 3rd Semester BS(SE) at Federal Urdu University.</p>
-            <p>I love creating responsive and interactive websites using HTML, CSS, and JavaScript.</p>
-          `;
-          break;
-        case 'projects':
-          content = `
-            <h1>Projects</h1>
-            <ul>
-              <li>🍽 Online Food Ordering Website</li>
-              <li>📱 Responsive Portfolio Website</li>
-              <li>🧮 JavaScript Calculator</li>
-            </ul>
-          `;
-          break;
-        case 'contact':
-          content = `
-            <h1>Contact Me</h1>
-            <p>Email: rehanapsacs@gmail.com</p>
-            <p>WhatsApp: 0319-6032704</p>
-          `;
-          break;
-        default:
-          content = `<p>Section not found.</p>`;
-      }
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>📞 Call Me: 0344-8427292 | WhatsApp: 0319-6032704</p>
+      </section>
+    </main>
+  </div>
 
-      contentBox.innerHTML = content;
-    }
-
-    // Default section on page load
-    showSection('home');
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
