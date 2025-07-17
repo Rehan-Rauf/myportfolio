@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rehan Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div id="logo">
+      <img src="https://via.placeholder.com/60x30.png?text=Logo" alt="Logo">
+    </div>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About</a></li>
+      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content Box -->
+  <section id="main-content">
+    <!-- Dynamic content will appear here -->
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    const contentBox = document.getElementById("main-content");
+
+    function showSection(section) {
+      let content = "";
+
+      switch(section) {
+        case 'home':
+          content = `
+            <h1>Welcome to Rehan's Portfolio</h1>
+            <p>I am a Front-End Developer & Student of BS Software Engineering.</p>
+          `;
+          break;
+        case 'about':
+          content = `
+            <h1>About Me</h1>
+            <p>Hi, I'm Rehan Rauf. Currently studying in 3rd Semester BS(SE) at Federal Urdu University.</p>
+            <p>I love creating responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+          `;
+          break;
+        case 'projects':
+          content = `
+            <h1>Projects</h1>
+            <ul>
+              <li>🍽 Online Food Ordering Website</li>
+              <li>📱 Responsive Portfolio Website</li>
+              <li>🧮 JavaScript Calculator</li>
+            </ul>
+          `;
+          break;
+        case 'contact':
+          content = `
+            <h1>Contact Me</h1>
+            <p>Email: rehanapsacs@gmail.com</p>
+            <p>WhatsApp: 0319-6032704</p>
+          `;
+          break;
+        default:
+          content = `<p>Section not found.</p>`;
+      }
+
+      contentBox.innerHTML = content;
+    }
+
+    // Default section on page load
+    showSection('home');
+  </script>
+
+</body>
+</html>
